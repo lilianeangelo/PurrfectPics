@@ -31,7 +31,8 @@ class _CatPhotoGalleryState extends State<CatPhotoGallery> {
     try {
       final response = await http.get(
         Uri.parse('https://api.thecatapi.com/v1/images/search?limit=5'),
-        headers: {'x-api-key': 'live_YEGmteSZB1ylRjnRbolzwijadQ0bGFYPpzsbQv9wQT59B2SkoFUhi7DqyRL0bPqB'},
+
+        headers: {'Content-Type': 'application/json', 'x-api-key': 'live_YEGmteSZB1ylRjnRbolzwijadQ0bGFYPpzsbQv9wQT59B2SkoFUhi7DqyRL0bPqB'},
       );
 
       if (response.statusCode == 200) {
